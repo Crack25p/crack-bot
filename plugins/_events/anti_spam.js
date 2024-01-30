@@ -23,8 +23,8 @@ exports.run = {
                   users.banTemp = 0
                   users.banTimes = 0
                })
-               if (m.isGroup && spam == 4) return client.reply(m.chat, `🚩 System detects you are spamming, please cooldown for *${env.cooldown} seconds*.`, m)
-               if (m.isGroup && spam >= 5) return client.reply(m.chat, `🚩 You were temporarily banned for ${((env.timeout / 1000) / 60)} minutes cause you over spam.`, m).then(() => {
+               if (m.isGroup && spam == 14) return client.reply(m.chat, `🚩 System detects you are spamming, please cooldown for *${env.cooldown} seconds*.`, m)
+               if (m.isGroup && spam >= 15) return client.reply(m.chat, `🚩 You were temporarily banned for ${((env.timeout / 1000) / 60)} minutes cause you over spam.`, m).then(() => {
                   users.banTemp = new Date() * 1
                   users.banTimes += 1
                   if (!isOwner && chats) {
@@ -35,8 +35,8 @@ exports.run = {
                      }
                   }
                })
-               if (!m.isGroup && spam == 4) return client.reply(m.chat, `🚩 System detects you are spamming, please cooldown for *${env.cooldown} seconds*.`, m)
-               if (!m.isGroup && spam >= 5) return client.reply(m.chat, `🚩 You were temporarily banned for ${((env.timeout / 1000) / 60)} minutes cause you over spam.`, m).then(() => {
+               if (!m.isGroup && spam == 14) return client.reply(m.chat, `🚩 System detects you are spamming, please cooldown for *${env.cooldown} seconds*.`, m)
+               if (!m.isGroup && spam >= 15) return client.reply(m.chat, `🚩 You were temporarily banned for ${((env.timeout / 1000) / 60)} minutes cause you over spam.`, m).then(() => {
                   users.banTemp = new Date() * 1
                   users.banTimes += 1
                })
